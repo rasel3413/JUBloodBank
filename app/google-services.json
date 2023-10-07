@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "972403417355",
+    "project_id": "ju-blood-bank",
+    "storage_bucket": "ju-blood-bank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972403417355:android:5f2412cb59706808ac820e",
+        "android_client_info": {
+          "package_name": "com.example.jubloodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972403417355-05p8souf8nqn9thtuoucntdi2d5cv9ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiSw0LD8gHRCvvADPoT4E6tdPIg_Xe36M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972403417355-05p8souf8nqn9thtuoucntdi2d5cv9ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

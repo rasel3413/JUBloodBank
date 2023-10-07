@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">JU Blood Bank</string>
+    <string-array name="blood">
+        <item>A+</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>O+</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+        <item>O-</item>
+    </string-array>
+    <string-array name="amount">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="hall">
+        <item>All</item>
+        <item>Mir Mosharraf Hossain Hall</item>
+        <item>Shaheed Salam-Barkat Hall</item>
+        <item>Bangabandhu Sheikh Mujibur Rahman Hall</item>
+        <item>Al Beruni Hall</item>
+        <item>Shaheed Rafiq-Jabbar Hall</item>
+        <item>A F M Kamaluddin Hall</item>
+        <item>Mowlana Bhashani Hall</item>
+        <item>Bishwakabi Rabindranath Tagore Hall</item>
+        <item>Jahanara Imam Hall</item>
+        <item>Nawab Faizunnesa Hall</item>
+        <item>Pritilata Hall</item>
+        <item>Fazilatunnesa Hall</item>
+        <item>Begum Khaleda Zia Hall</item>
+        <item>Sheikh Hasina Hall</item>
+        <item>Bangamata Begum Fazilatunnessa Mujib Hall</item>
+        <item>Begum Sufia Kamal Hall</item>
+    </string-array>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>
