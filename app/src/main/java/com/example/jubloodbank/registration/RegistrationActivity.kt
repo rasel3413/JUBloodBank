@@ -30,6 +30,9 @@ class RegistrationActivity : AppCompatActivity() {
         binding.bloodGroup.setAdapter(adapter)
         binding.edRegHall.setAdapter(adapter2)
         binding.submit.setOnClickListener {
+
+
+
             if (binding.edRegName.text.toString().isEmpty()) {
                 binding.edRegName.error = "This field is required. "
             } else if (binding.edRegEmail.text.toString().isEmpty()) {
@@ -46,7 +49,13 @@ class RegistrationActivity : AppCompatActivity() {
                 binding.edRegPassword.error = "This field is required. "
             } else if (binding.edRegConfirmPassword.text.toString().isEmpty()) {
                 binding.edRegConfirmPassword.error = "This field is required. "
-            } else {
+            }
+            else    if (!hall.contains(binding.edRegHall.text.toString())){
+                binding.edRegHall.error="Select Valid Hall name "
+            }
+
+
+            else {
                 if (binding.edRegPassword.text.toString() == binding.edRegConfirmPassword.text.toString()) {
                     val user = User(
                         name = binding.edRegName.text.toString(),

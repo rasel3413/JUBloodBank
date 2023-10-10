@@ -115,9 +115,9 @@
                 android:id="@+id/edRegHall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clickable="false"
-                android:focusable="false"
-                tools:ignore="KeyboardInaccessibleWidget" />
+
+               
+                 />
 
 
         </com.google.android.material.textfield.TextInputLayout>

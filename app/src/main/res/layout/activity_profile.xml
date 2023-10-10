@@ -28,6 +28,7 @@
         android:clipToOutline="true"
         android:src="@drawable/img_1"/>
     <TextView
+        android:id="@+id/personName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rasel"
@@ -36,6 +37,14 @@
         android:textSize="20sp"
         android:textStyle="bold"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:gravity="center"
+        >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -60,7 +69,7 @@
             android:layout_height="wrap_content"
             android:text="Medical History"
             android:textSize="20sp"
-            android:textStyle="bold"
+
             android:layout_marginStart="10dp"
             android:padding="10dp"
             />
@@ -88,7 +97,7 @@
             android:layout_height="wrap_content"
             android:text="Customer Support"
             android:textSize="20sp"
-            android:textStyle="bold"
+
             android:layout_marginStart="10dp"
             android:padding="10dp"
             />
@@ -117,7 +126,7 @@
             android:layout_height="wrap_content"
             android:text="Settings"
             android:textSize="20sp"
-            android:textStyle="bold"
+
             android:layout_marginStart="10dp"
             android:padding="10dp"
             />
@@ -147,7 +156,7 @@
             android:layout_height="wrap_content"
             android:text="Logout"
             android:textSize="20sp"
-            android:textStyle="bold"
+
             android:layout_marginStart="10dp"
             android:padding="10dp"
             />
@@ -159,4 +168,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         app:cardBackgroundColor="#877F7F" />
+
+    </LinearLayout>
+
 </LinearLayout>

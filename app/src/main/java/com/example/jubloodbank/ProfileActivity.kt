@@ -19,6 +19,10 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val user=auth.currentUser
+
+        if (user != null) {
+            binding.personName.text=user.displayName
+        }
         binding.logout.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this,LoginActivity::class.java))

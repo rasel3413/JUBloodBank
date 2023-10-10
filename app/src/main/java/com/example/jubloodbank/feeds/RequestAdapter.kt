@@ -26,10 +26,10 @@ class RequestAdapter(private var request: List<DataRequest>) :
         val currentItem: DataRequest = request[position]
         val time=convertTo12HourFormat(currentItem.Time.toString())
         val date=formatDate(currentItem.Date.toString())
-        holder.pname.text = "Patient Name:${currentItem.patient}"
-        holder.phone.text="Phone: ${currentItem.phone}"
-        holder.address.text = "Hospital:${currentItem.Location} Locaation:${currentItem.Location}"
-        holder.amount.text = "Blood Required: ${currentItem.amuont}  Bag"
+        holder.pname.text = "Patient Name: ${currentItem.patient}"
+        holder.phone.text=": ${currentItem.phone}"
+        holder.address.text = "Hospital: ${currentItem.Hname} \nLocaation: ${currentItem.Location}"
+        holder.amount.text = "Blood Needed: ${currentItem.amuont}  Bag"
         holder.datetime.text = "Date: ${date} || Time: ${time}"
         holder.type.text = "Nedded ${currentItem.Blood}"
 
