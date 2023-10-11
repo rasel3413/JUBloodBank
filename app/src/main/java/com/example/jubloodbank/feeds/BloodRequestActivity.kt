@@ -1,13 +1,21 @@
 package com.example.jubloodbank.feeds
 
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.jubloodbank.Fragment1
+import com.example.jubloodbank.Fragment2
 import com.example.jubloodbank.R
 import com.example.jubloodbank.bloodlist.BloodAdapter
 import com.example.jubloodbank.bloodlist.data.DataRequest
+import com.example.jubloodbank.databinding.ActivityBloodRequestBinding
+import com.example.jubloodbank.databinding.ActivityMainBinding
 import com.example.jubloodbank.requestblood.RequestData
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -15,55 +23,45 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 class BloodRequestActivity : AppCompatActivity() {
+
+
+    lateinit var binding: ActivityBloodRequestBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_blood_request)
+        binding = ActivityBloodRequestBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         val database = FirebaseDatabase.getInstance().getReference("requests")
-        val recycler=findViewById<RecyclerView>(R.id.recycler)
+
 
 
         val back=findViewById<ImageView>(R.id.back)
         back.setOnClickListener {
             onBackPressed()
         }
+        binding.fragment1.setOnClickListener {
+
+            binding.fragment1.isChecked=true;
+            binding.fragment2.isChecked=false;
+
+            replaceFragment(Fragment1())
+        }
+
+        binding.fragment2.setOnClickListener {
+            binding.fragment1.isChecked=false;
+            binding.fragment2.isChecked=true;
+            replaceFragment(Fragment2())
+        }
 
 
-        recycler.layoutManager= LinearLayoutManager(this@BloodRequestActivity)
-        val bloodRequestList = mutableListOf<DataRequest>()
-
-        database.addListenerForSingleValueEvent(object : ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.childrenCount!=bloodRequestList.size.toLong()) {
-                    bloodRequestList.clear()
-                    for (datasnap in snapshot.children) {
-
-                        val ptname: String = datasnap.child("patient").value as String
-                        val blood = datasnap.child("blood").getValue(String::class.java)
-                        val amount = datasnap.child("amuont").getValue(String::class.java)
-                        val date = datasnap.child("date").getValue(String::class.java)
-                        val time = datasnap.child("time").getValue(String::class.java)
-                        val hsname = datasnap.child("hname").getValue(String::class.java)
-                        val location = datasnap.child("location").getValue(String::class.java)
-                        val phone = datasnap.child("phone").getValue(String::class.java)
-
-                        val notet:String = datasnap.child("note").value as String
-                        val personname:String = datasnap.child("personName").value as String
-                        val bloodEntity = DataRequest(ptname, blood, amount, date,time,hsname,location,personname,phone,notet)
-                        bloodRequestList.add(bloodEntity)
 
 
-                    }
-                }
+    }
+    private fun replaceFragment(fragment: Fragment) {
 
-                recycler.adapter= RequestAdapter(bloodRequestList)
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
-
+        val fragmentmanager=supportFragmentManager
+        val fragmentTransaction=fragmentmanager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragmentContainerView,fragment)
+        fragmentTransaction.commit()
     }
 }

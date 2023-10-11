@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/requestBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+
+        app:title="Edit Profile"
+
+        />
+    <ImageView
+
+        android:id="@+id/profileImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/circular_profile_pic"
+        android:clipToOutline="true"
+        android:src="@drawable/img_1"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Full Name"
+        android:textColorHint="#BEFB1212"
+        app:boxStrokeColor="#FF0000">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Name"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Phone Number"
+        android:textColorHint="#BEFB1212"
+        app:boxStrokeColor="#FF0000">
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PhoneNumber"
+            android:layout_width="match_parent"
+            android:inputType="number"
+
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customerSpinnerLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:hint="Blood Type*"
+        android:textColorHint="#BEFB1212"
+        app:boxStrokeColor="#FF0000">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/bloodtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/update"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#BC0505"
+        android:clickable="true"
+
+
+        android:gravity="center"
+        android:layout_gravity="bottom|right"
+
+
+        android:text="Update" />
+
+
+
+</LinearLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import android.widget.ProgressBar
+import com.example.jubloodbank.HomePage.HomePageActivity
 import com.example.jubloodbank.MainActivity
 import com.example.jubloodbank.R
 

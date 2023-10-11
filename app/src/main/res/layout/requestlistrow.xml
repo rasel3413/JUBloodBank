@@ -52,8 +52,10 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:orientation="horizontal"
+android:weightSum="3"
          >
          <ImageView
+android:layout_weight="1"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:src="@drawable/baseline_call_24"
@@ -61,8 +63,10 @@
 
              />
         <androidx.appcompat.widget.AppCompatTextView
+            android:layout_weight="2"
+
             android:id="@+id/phonenumberR"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:autoLink="phone"
@@ -70,6 +74,16 @@
 
 
             tools:text=": 01613162522" />
+         <ImageView
+             android:layout_weight="1"
+
+             android:id="@+id/delete"
+             android:layout_gravity="right"
+             android:layout_width="40dp"
+             android:layout_height="30dp"
+             android:src="@drawable/baseline_delete_24"
+
+             />
      </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -77,7 +91,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            tools:text="Blood Required:A+" />
+            android:textSize="17sp"
+            tools:text="Blood Required:2bag" />
 
 
         <androidx.appcompat.widget.AppCompatTextView

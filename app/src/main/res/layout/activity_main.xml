@@ -7,24 +7,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/backbg"
-        android:scaleType="centerCrop"
-        />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backbg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2"
         android:layout_width="0dp"
 
-        android:visibility="gone"
         android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="0dp"
+        android:layout_height="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

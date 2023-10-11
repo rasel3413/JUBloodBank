@@ -12,6 +12,10 @@ import com.example.jubloodbank.databinding.ActivityRegistrationBinding
 import com.example.jubloodbank.databinding.ActivityRequestBloodBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ServerValue
+import com.google.firebase.messaging.FirebaseMessaging
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.Calendar
 
 class RequestBloodActivity : AppCompatActivity() {
@@ -23,6 +27,7 @@ class RequestBloodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRequestBloodBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        FirebaseMessaging.getInstance().subscribeToTopic("All")
 
 
         binding.back.setOnClickListener {
@@ -82,6 +87,7 @@ class RequestBloodActivity : AppCompatActivity() {
             // Show the dialog
             timePickerDialog.show()
         }
+        val currentUserUid = firebaseAuth.currentUser?.uid
 
 
         binding.submit.setOnClickListener {
@@ -128,10 +134,14 @@ class RequestBloodActivity : AppCompatActivity() {
                 var personName=binding.personName.text.toString()
                 var phone=binding.phonenumber.text.toString()
                 var note=binding.note.text.toString()
-
-                val request = RequestData(patient,Blood,amuont,Date,Time,Hname,Location,personName,phone,note)
+                val currentTime = -System.currentTimeMillis()
+                val request = RequestData(patient,Blood,amuont,Date,Time,Hname,Location,personName,phone,note,currentUserUid,   currentTime)
 
                 newUserRef.setValue(request)
+                GlobalScope.launch {
+                    FcmNotificationSender.sendPushNotification("/topics/All","Blood Needed",Blood)
+
+                }
 
                 startActivity(Intent(this,HomePageActivity::class.java))
 

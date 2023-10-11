@@ -19,7 +19,7 @@ class BloodAdapter(private var blood: MutableList<BloodEntity>):RecyclerView.Ada
 
     override fun onBindViewHolder(holder: BloodAdapter.MyViewHolder, position: Int) {
         val currentItem:BloodEntity=blood[position]
-        holder.txt1.text= "${currentItem.Name}"
+        holder.txt1.text= "Name: ${currentItem.Name}"
         holder.txt3.text="Phone Number: ${currentItem.phoneNumber}"
         holder.txtblood.text="Blood Group: ${currentItem.bloodGroup}"
         holder.txtHall.text="Hall: ${currentItem.HallName}"

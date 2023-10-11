@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0000" /> <!-- Red color when pressed -->
+        </shape>
+    </item>
+    <item android:state_focused="true" android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF00FF" /> <!-- Change this to your hover color (e.g., purple) -->
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0000" /> <!-- Red color when focused -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00FF00" /> <!-- Default color (e.g., green) -->
+        </shape>
+    </item>
+</selector>

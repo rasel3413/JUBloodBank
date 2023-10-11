@@ -43,7 +43,7 @@
                 android:layout_gravity="top|center"
 
                 android:layout_marginTop="15dp"
-                android:text="Rasel"
+                android:text=""
                 android:textSize="20sp"
                 />
 
@@ -171,11 +171,11 @@
                         android:layout_gravity="center"
                         android:scaleType="fitCenter"
 
-                        android:src="@drawable/newfeed" />
+                        android:src="@drawable/allrequest" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Feed"
+                        android:text="See All Request"
                         android:textStyle="normal"
 
                         android:textSize="20sp"

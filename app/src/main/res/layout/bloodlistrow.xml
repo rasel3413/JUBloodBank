@@ -16,30 +16,57 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvFirstName"
-
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:text="Name: Ahsan Habib" />
+            <ImageView
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvPhoneNumber"
+                android:id="@+id/profileImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top"
+                android:layout_marginEnd="10dp"
+
+                android:background="@drawable/circular_profile_pic"
+                android:clipToOutline="true"
+                android:src="@drawable/img_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFirstName"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Name: Ahsan Habib" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:autoLink="phone"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:autoLink="phone"
+                android:textSize="16sp"
 
 
-            tools:text="Phone No: 01613162522" />
+                tools:text="Phone No: 01613162522" />
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvHall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:layout_marginTop="5dp"
             tools:text="Hall: BBH" />
 
@@ -48,8 +75,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textColor="#F40000"
             android:textSize="15sp"
-           android:textColor="#F40000"
             tools:text="Blood Group: B+" />
 
 

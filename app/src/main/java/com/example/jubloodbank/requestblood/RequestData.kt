@@ -1,5 +1,7 @@
 package com.example.jubloodbank.requestblood
 
+import com.google.firebase.database.ServerValue
+
 data class RequestData(
     var patient:String,
     var Blood:String?=null,
@@ -13,5 +15,6 @@ data class RequestData(
     var phone:String,
     var note:String,
 
-    var id:String?=null
+    var id:String?=null,
+    val createdTime: Any = ServerValue.TIMESTAMP
 )
