@@ -22,7 +22,7 @@ JU Blood Bank is an Android mobile application developed in Kotlin that serves a
 5. **Community:** Join a community of compassionate individuals dedicated to saving lives.
 6. **Stay Updated:** Receive notifications, reminders, and updates on blood donation events.
 
-## Get Involved
+## ScreenShots
 
 <p align="center">
   <img src="https://github.com/rasel3413/JUBloodBank/blob/master/images/Donor%20List.jpeg" alt="Image 1" width="200">
