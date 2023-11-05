@@ -31,8 +31,11 @@ JU Blood Bank is a community-driven initiative, and we invite you to join us in 
 ## Screenshots
 
 <p align="center">
+    <img src=" https://github.com/rasel3413/JUBloodBank/blob/master/images/splashscreen.jpeg" alt="Image 3" width="200">
+   <img src="https://github.com/rasel3413/JUBloodBank/blob/master/images/HomePage.jpeg" alt="Image 2" width="200">
   <img src="https://github.com/rasel3413/JUBloodBank/blob/master/images/Donor%20List.jpeg" alt="Image 1" width="200">
-  <img src="https://github.com/rasel3413/JUBloodBank/blob/master/images/HomePage.jpeg" alt="Image 2" width="200">
+
   <img src="https://github.com/rasel3413/JUBloodBank/blob/master/images/ProfilePage.jpeg" alt="Image 3" width="200">
+
 </p>
 
